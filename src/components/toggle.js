@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import styled from "styled-components";
 
 const Toggle = ({ children, title }) => {
-  const [toggle, setToggle] = useState(true);
+  const [toggle, setToggle] = useState(false);
 
   return (
     <StyledToggle layout onClick={() => setToggle(!toggle)}>
