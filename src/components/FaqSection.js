@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import { About } from "../styles";
+import Toggle from "../components/toggle";
+import { AnimateSharedLayout } from "framer-motion";
 
 const FaqSection = () => {
   return (
@@ -8,39 +10,58 @@ const FaqSection = () => {
       <h2>
         Any Questions <span>FAQ</span>
       </h2>
-      <div className="question">
-        <h4>How do I start</h4>
-        <div className="answer">
-          <p>Lorem ipsum dolor sit amet.</p>
-          <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem
-            saepe iure pariatur fugiat qui odit.
-          </p>
-        </div>
-        <div className="faq-line"></div>
-      </div>
-      <div className="question">
-        <h4>Different Payment Methods</h4>
-        <div className="answer">
-          <p>Lorem ipsum dolor sit amet.</p>
-          <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem
-            saepe iure pariatur fugiat qui odit.
-          </p>
-        </div>
-        <div className="faq-line"></div>
-      </div>
-      <div className="question">
-        <h4>What services do you offer?</h4>
-        <div className="answer">
-          <p>Lorem ipsum dolor sit amet.</p>
-          <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem
-            saepe iure pariatur fugiat qui odit.
-          </p>
-        </div>
-        <div className="faq-line"></div>
-      </div>
+      <AnimateSharedLayout>
+        <Toggle title="How do I start?">
+          <div className="question">
+            <div className="answer">
+              <p>Lorem ipsum dolor sit amet.</p>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Voluptatem saepe iure pariatur fugiat qui odit.
+              </p>
+            </div>
+          </div>
+        </Toggle>
+      </AnimateSharedLayout>
+      <AnimateSharedLayout>
+        <Toggle title="Daily Schedule">
+          <div className="question">
+            <div className="answer">
+              <p>Lorem ipsum dolor sit amet.</p>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Voluptatem saepe iure pariatur fugiat qui odit.
+              </p>
+            </div>
+          </div>
+        </Toggle>
+      </AnimateSharedLayout>
+      <AnimateSharedLayout>
+        <Toggle title="Different Payment Methods">
+          <div className="question">
+            <div className="answer">
+              <p>Lorem ipsum dolor sit amet.</p>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Voluptatem saepe iure pariatur fugiat qui odit.
+              </p>
+            </div>
+          </div>
+        </Toggle>
+      </AnimateSharedLayout>
+      <AnimateSharedLayout>
+        <Toggle title="What services do you offer?">
+          <div className="question">
+            <div className="answer">
+              <p>Lorem ipsum dolor sit amet.</p>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Voluptatem saepe iure pariatur fugiat qui odit.
+              </p>
+            </div>
+          </div>
+        </Toggle>
+      </AnimateSharedLayout>
     </Faq>
   );
 };
