@@ -7,6 +7,7 @@ import theracer from "../img/theracer-small.png";
 import goodtimes from "../img/goodtimes-small.png";
 //Animations
 import { motion } from "framer-motion";
+import { useScroll } from "../components/useScroll";
 import {
   pageAnimation,
   fade,
@@ -15,7 +16,7 @@ import {
   slider,
   sliderContainer,
 } from "../animation";
-import { useScroll } from "../components/useScroll";
+import ScrollTop from "../components/ScrollTop";
 
 const OurWork = () => {
   const [element, controls] = useScroll();
@@ -29,6 +30,7 @@ const OurWork = () => {
       exit="exit"
       layout="position"
     >
+      <ScrollTop />
       <motion.div variants={sliderContainer}>
         <Frame1 variants={slider}></Frame1>
         <Frame2 variants={slider}></Frame2>
@@ -72,6 +74,9 @@ const Work = styled(motion.div)`
   min-height: 100vh;
   overflow: hidden;
   padding: 5rem 10rem;
+  @media (max-width: 1300px) {
+    padding: 2rem;
+  }
   h2 {
     padding: 1rem 0rem;
   }
